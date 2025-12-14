@@ -13,12 +13,15 @@ interface Message {
 
 export function VirtualAssistant() {
   const [isOpen, setIsOpen] = useState(false);
+ // ...existing code...
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
       content: '👋 Olá! Sou a **Iamanos**, sua assistente virtual. Como posso ajudá-lo hoje?',
       timestamp: new Date(),
-.next  ]);
+    },
+  ]);
+// ...existing code...
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
